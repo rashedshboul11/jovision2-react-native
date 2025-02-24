@@ -1,9 +1,9 @@
 import React from "react";
-import Task33 from "./Tasks/Task33";
+import Task34 from "./Tasks/Task34";
 export default function App() {
     return (
      <>
-        <Task33></Task33>
+        <Task34></Task34>
      </>
     );
 }
