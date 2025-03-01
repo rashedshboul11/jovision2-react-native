@@ -1,8 +1,12 @@
 import React from "react";
-import Task38 from "./Tasks/Task38";
-export default function App() {
-    return (
-        <Task38></Task38>
-    );
-}
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import Task39 from "./Tasks/Task39";
 
+export default function App() {
+  return (
+    <Provider store={store}>
+      <Task39 />
+    </Provider>
+  );
+}
