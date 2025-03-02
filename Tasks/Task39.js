@@ -1,17 +1,20 @@
-import React from "react";
-import { View, Button, StyleSheet } from "react-native";
-import { useSelector, useDispatch } from "react-redux";
-import { toggleVisibility } from "../redux/textSlice";
-import ComponentOne from "./ComponentOne";
+import React from 'react';
+import {View, Button, StyleSheet} from 'react-native';
+import {useSelector, useDispatch} from 'react-redux';
+import {toggleVisibility} from '../redux/textSlice';
+import ComponentOne from './myComponents/ComponentOne_Task39';
 
 export default function Task39() {
   const dispatch = useDispatch();
-  const isVisible = useSelector((state) => state.text.isVisible);
+  const isVisible = useSelector(state => state.text.isVisible);
 
   return (
     <View style={styles.mainContainer}>
       {isVisible && <ComponentOne />}
-      <Button title={isVisible ? "Hide" : "Show"} onPress={() => dispatch(toggleVisibility())} />
+      <Button
+        title={isVisible ? 'Hide' : 'Show'}
+        onPress={() => dispatch(toggleVisibility())}
+      />
     </View>
   );
 }
@@ -19,8 +22,8 @@ export default function Task39() {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#f4f4f4",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#f4f4f4',
   },
 });
